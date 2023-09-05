@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>571235487456</title>
+    <style>
+        div {
+            color: black;
+            background-color: sandybrown;
+            padding: 12px;
+            margin: 0px;
+            border: solid black 2px;
+            width: 30px;
+            height: 30px;
+            float: left;
+        }
+
+        div.heltVenstre {
+            clear: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="r1k1" onclick="trøkka(this,'r1k2','r2k1','r2k1','r2k1')">7</div>
+    <div id="r1k2" onclick="trøkka(this,'r1k1','r1k3','r2k2','r2k2')">1</div>
+    <div id="r1k3" onclick="trøkka(this,'r1k2','r2k3','r2k3','r2k3')">2</div>
+
+    <div id="r2k1" class="heltVenstre" onclick="trøkka(this,'r2k2','r1k1','r3k1','r3k1')">5</div>
+    <div id="r2k2" onclick="trøkka(this,'r2k1','r1k2','r2k3','r3k2')"></div>
+    <div id="r2k3" onclick="trøkka(this,'r1k3','r2k2','r3k3','r3k3')">3</div>
+
+    <div id="r3k1" class="heltVenstre" onclick="trøkka(this,'r2k1','r3k2','r3k2','r3k2')">8</div>
+    <div id="r3k2" onclick="trøkka(this,'r3k1','r2k2','r3k3','r3k3')">4</div>
+    <div id="r3k3" onclick="trøkka(this,'r3k2','r2k3','r2k3','r2k3')">6</div>
+
+    <script>
+
+        function trøkka(tagElement, hundEN, sauEN, kattEN, elefantEN) {
+            if (document.getElementById(hundEN).innerHTML == '') {
+                document.getElementById(hundEN).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = '';
+            }
+            if (document.getElementById(sauEN).innerHTML == '') {
+                document.getElementById(sauEN).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = '';
+            }
+            if (document.getElementById(kattEN).innerHTML == '') {
+                document.getElementById(kattEN).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = '';
+            }
+            if (document.getElementById(elefantEN).innerHTML == '') {
+                document.getElementById(elefantEN).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = '';
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
